@@ -5,10 +5,13 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="Dovydas Ceilutka <d.ceilutka@gmail.com>"
 
+RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl gnupg build-essential wget git 
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -yq nodejs
+
 RUN pip install --quiet jupyter jupyterlab matplotlib jupyter_http_over_ws 
 RUN jupyter serverextension enable --py jupyter_http_over_ws
 
-RUN apt-get install -y --no-install-recommends wget git
 WORKDIR /tf
 EXPOSE 8888
 
