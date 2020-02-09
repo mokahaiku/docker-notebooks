@@ -9,7 +9,7 @@ RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl gnupg 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -yq nodejs
 
-RUN pip install --quiet jupyter jupyterlab matplotlib jupyter_http_over_ws 
+RUN pip install --upgrade pip && pip install --quiet jupyter jupyterlab matplotlib jupyter_http_over_ws 
 RUN jupyter serverextension enable --py jupyter_http_over_ws
 
 WORKDIR /tf
