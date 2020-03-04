@@ -1,0 +1,50 @@
+version: "2.3"
+services:
+  tf20:
+    runtime: nvidia
+    image: tribeofai/docker-notebooks:tf20-lab
+    container_name: tf20-lab
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+      - 6006:6006
+    volumes:
+      - /home/${USER}:/tf
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+  tf21:
+    runtime: nvidia
+    image: tribeofai/docker-notebooks:tf21-lab
+    container_name: tf21-lab
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+      - 6006:6006
+    volumes:
+      - /home/${USER}:/tf
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+  pytorch13:
+    runtime: nvidia
+    image: tribeofai/docker-notebooks:pytorch13-lab
+    container_name: pytorch13-lab
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+      - 6006:6006
+    volumes:
+      - /home/${USER}:/workspace
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+  pytorch14:
+    runtime: nvidia
+    image: tribeofai/docker-notebooks:pytorch14-lab
+    container_name: pytorch14-lab
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+      - 6006:6006
+    volumes:
+      - /home/${USER}:/workspace
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
