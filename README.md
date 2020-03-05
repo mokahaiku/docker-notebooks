@@ -21,4 +21,4 @@ Dockerfiles for Jupyter Lab notebooks.
 - PyTorch 1.3 `docker-compose up -f docker-compose.cpu.yml -d pytorch13`
 - PyTorch 1.4 `docker-compose up -f docker-compose.cpu.yml -d pytorch14`
 - TensorFlow 2.0 `docker-compose up -f docker-compose.cpu.yml -d tf20`
-- TensorFlow 2.1 `docker-compose up -f docker-compose.cpu.ymlup -d tf21`
+- TensorFlow 2.1 `docker-compose up -f docker-compose.cpu.yml -d tf21`
