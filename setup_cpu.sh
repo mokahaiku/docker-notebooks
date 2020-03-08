@@ -1,4 +1,4 @@
-sudo apt-get update --yes
+sudo apt-get update
 sudo apt-get install --yes \
     apt-transport-https \
     ca-certificates \
@@ -10,7 +10,7 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
-sudo apt-get update --yes
+sudo apt-get update
 sudo apt-get install --yes docker-ce docker-ce-cli containerd.io
 sudo groupadd docker
 sudo usermod -aG docker $USER
